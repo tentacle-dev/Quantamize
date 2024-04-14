@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="styles/formMisc.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <div class="flex">
@@ -31,4 +35,10 @@
         </div>
     </div> 
 </body>
+<script>
+    function clearForm() {
+        document.getElementById("loginForm").reset();
+    }
+</script>
+<script src="scripts/login.js"></script>
 </html>
