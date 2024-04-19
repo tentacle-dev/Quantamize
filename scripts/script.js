@@ -175,6 +175,17 @@ window.onload = () => {
     userTransaction.onerror = function (event) {
       console.error("Error adding users: " + event.target.errorCode);
     };
+
+    // Cart Table
+    let cartStore = db.createObjectStore("cart", {
+      keyPath: "cart_id",
+      autoIncrement: true,
+    });
+    cartStore.createIndex("product_id", "product_id", { unique: false });
+    cartStore.createIndex("user_id", "user_id", { unique: false });
+    cartStore.createIndex("quantity", "quantity", { unique: false });
+
+    console.log("Cart Table created successfully");
   };
 };
 
