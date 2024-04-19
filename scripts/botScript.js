@@ -1,4 +1,5 @@
 // Function to display products
+
 function displayProducts() {
   const dbName = "Quantamize";
   const request = window.indexedDB.open(dbName);
@@ -27,7 +28,7 @@ function displayProducts() {
 
 <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer ">
     
-        <img class="p-1 rounded-t-lg product-img" src="${product.image_path}" />
+        <img class="p-1 rounded-t-lg product-img zoomable-image" src="${product.image_path}" />
     <div class="px-5 pb-5 mt-2">
         <div>
             <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">${product.name}</h5>
@@ -128,4 +129,50 @@ document.addEventListener("DOMContentLoaded", function () {
     signinLink.href = "login.html";
     signinLink.innerText = "Sign in";
   }
+});
+
+let lastTouchDistance = 0;
+let currentScale = 1;
+let activeImage = null;
+
+const images = document.querySelectorAll(".zoomable-image");
+
+images.forEach((image) => {
+  image.addEventListener("touchstart", function (event) {
+    activeImage = this;
+    if (event.touches.length >= 2) {
+      const touch1 = event.touches[0];
+      const touch2 = event.touches[1];
+      lastTouchDistance = Math.hypot(
+        touch2.clientX - touch1.clientX,
+        touch2.clientY - touch1.clientY
+      );
+    }
+  });
+
+  image.addEventListener("touchmove", function (event) {
+    if (activeImage === this && event.touches.length >= 2) {
+      const touch1 = event.touches[0];
+      const touch2 = event.touches[1];
+      const touchDistance = Math.hypot(
+        touch2.clientX - touch1.clientX,
+        touch2.clientY - touch1.clientY
+      );
+
+      const scaleChange = touchDistance / lastTouchDistance;
+      currentScale *= scaleChange;
+
+      this.style.transform = `scale(${currentScale})`;
+
+      lastTouchDistance = touchDistance;
+
+      event.preventDefault();
+    }
+  });
+
+  image.addEventListener("touchend", function (event) {
+    if (activeImage === this) {
+      activeImage = null;
+    }
+  });
 });
