@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (userId) {
     signinLink.href = "cart.html";
-    signinLink.innerText = "My Cart";
+    signinLink.innerText = "Logout";
   } else {
     signinLink.href = "login.html";
     signinLink.innerText = "Sign in";
