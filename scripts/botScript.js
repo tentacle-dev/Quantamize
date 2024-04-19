@@ -68,6 +68,61 @@ function displayProducts() {
   };
 }
 
+// Function to add product to cart
+function addToCart(product) {
+  const user_id = localStorage.getItem("user_id"); // Retrieve user ID from sessionStorage
+  if (!user_id) {
+    // User is not logged in, redirect to login page
+    window.location.href = "login.html";
+    return;
+  }
+
+  const dbName = "Quantamize";
+  const request = window.indexedDB.open(dbName);
+
+  request.onerror = function () {
+    console.error("Failed to open database");
+  };
+
+  request.onsuccess = function (event) {
+    const db = event.target.result;
+    const transaction = db.transaction(["cart"], "readwrite");
+    const cartStore = transaction.objectStore("cart");
+
+    // Get all cart items
+    const getAllRequest = cartStore.getAll();
+    getAllRequest.onsuccess = function () {
+      const cartItems = getAllRequest.result;
+      // Check if the combination of product ID and user ID already exists in the cart
+      const existingCartItem = cartItems.find(
+        (item) =>
+          item.product_id === product.product_id && item.user_id === user_id
+      );
+      if (existingCartItem) {
+        // Entry already exists, update quantity or any other field if needed
+        existingCartItem.quantity++; // For example, increase quantity
+        cartStore.put(existingCartItem); // Update the existing entry
+        console.log("Existing entry updated in cart");
+      } else {
+        // Entry doesn't exist, add new entry to cart
+        const cartItem = {
+          product_id: product.product_id,
+          user_id: user_id,
+          quantity: 1, // Initial quantity
+        };
+        // Add the new cart item to the cart table
+        const addToCartRequest = cartStore.add(cartItem);
+        addToCartRequest.onsuccess = function () {
+          console.log("Product added to cart");
+        };
+        addToCartRequest.onerror = function () {
+          console.error("Failed to add product to cart");
+        };
+      }
+    };
+  };
+}
+
 window.onload = () => {
   displayProducts();
 };
