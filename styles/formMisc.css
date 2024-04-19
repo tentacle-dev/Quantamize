@@ -7,14 +7,3 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-body {
-    /* Set background image */
-    background-image: url('assets/contact-us.jpg');
-
-    /* Specify background image behavior */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Cover the entire background */
-    background-position: center; /* Center the image */
-    /* Optionally, you can add background color */
-    /* background-color: #f0f0f0; Fallback color in case the image doesn't load */
-}
