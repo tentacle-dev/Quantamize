@@ -88,6 +88,37 @@ function registerUser() {
     }
 }
 
+function calculateProgress(email, password, personalURL, yearOfBirth, genderVal, comments, confirmData) {
+    let progress = 0;
+    if (email.value) progress += 15;
+    if (password.value) progress += 15;
+    if (personalURL.value) progress += 15;
+    if (yearOfBirth.value) progress += 15;
+    if (genderVal != null) progress += 15;
+    if (comments.value) progress += 15;
+    if (confirmData.checked) progress += 10; // Confirm data checkbox contributes less
+    return progress;
+}
+
+function handleProgressBar(){
+    let progress = calculateProgress(email, password, personalURL, yearOfBirth, genderVal, comments, confirmData);
+    updateProgressBar(progress);
+
+}
+
+function updateProgressBar(progress) {
+    const progressBar = document.getElementById('progress');
+    progressBar.style.width = '${progress}%';
+    if (progress == 100){
+        progressBar.className += bg-green-500;
+    }
+}
+
+
+function handleInputEvent() {
+    handleProgressBar();
+}
+
 // Add event listeners to form fields for input events
 document.getElementById('email').addEventListener('input', handleInputEvent);
 document.getElementById('password').addEventListener('input', handleInputEvent);
