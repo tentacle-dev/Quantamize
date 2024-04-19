@@ -11,46 +11,71 @@
 </head>
 <body class=" ">
     <section>
-        <div class="navbar mx-auto px-4 lg:px-12 py-4">
-            <div class="navbar-start">
-                <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a>Item 1</a></li>
-                    <li>
-                    <a>Parent</a>
-                    <ul class="p-2">
-                        <li><a>Submenu 1</a></li>
-                        <li><a>Submenu 2</a></li>
-                    </ul>
-                    </li>
-                    <li><a>Item 3</a></li>
-                </ul>
-                </div>
-                <a href="index.html" class="btn btn-ghost text-xl bg-clip-text text-transparent bg-gradient-to-tr from-orange-600 to-yellow-300">Quantumize</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
-                <li><a href="about-us.html">ABOUT US</a></li>
+        <div class="navbar mx-auto px-12">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div
+                tabindex="0"
+                role="button"
+                class="btn btn-ghost lg:hidden -ml-8"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>ABOUT US</a></li>
                 <li>
-                    <details>
-                    <summary>OUR PRODUCTS</summary>
-                    <ul class="p-2">
-                        <li><a>BOTS</a></li>
-                        <li><a>DRONES</a></li>
-                    </ul>
-                    </details>
+                  <a href="">OUR PRODUCTS</a>
+                  <ul class="p-2">
+                    <li><a href="bot.html">BOTS</a></li>
+                    <li><a href="drone.html">DRONE 2</a></li>
+                  </ul>
                 </li>
-                <li><a>CONTACT US</a></li>
-                </ul>
+                <li><a href="contact-us.html">Contact Us</a></li>
+              </ul>
             </div>
-            <div class="navbar-end">
-                <a class="btn gradient-text-1">Buy now</a>
-            </div>
+            <a
+              class="btn btn-ghost text-md bg-clip-text text-transparent bg-gradient-to-tr from-orange-600 to-yellow-300 lg:text-xl"
+              >Quantumize</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a href="about-us.html">ABOUT US</a></li>
+              <li>
+                <details>
+                  <summary>OUR PRODUCTS</summary>
+                  <ul class="p-2">
+                    <li><a href="bot.html">BOTS</a></li>
+                    <li><a href="drone.html">DRONES</a></li>
+                  </ul>
+                </details>
+              </li>
+              <li><a href="contact-us.html">CONTACT US</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a href="login.html" class="btn gradient-text-1 mt-2" id="signin-link"
+              >Sign in</a
+            >
+          </div>
         </div>
-    </section>
+      </section>
     <section class="lg:hidden px-4 lg:px-24 py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div class="text-center mb-8 md:mb-0">
