@@ -123,8 +123,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const userId = localStorage.getItem("user_id");
 
   if (userId) {
-    signinLink.href = "cart.html";
-    signinLink.innerText = "My Cart";
+    signinLink.href = "logout.html";
+    signinLink.innerText = "Logout";
   } else {
     signinLink.href = "login.html";
     signinLink.innerText = "Sign in";

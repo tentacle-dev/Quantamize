@@ -265,3 +265,10 @@ window.onload = function () {
   checkLoggedIn();
   displayCartItems();
 };
+if (userId) {
+  signinLink.href = "logout.html";
+  signinLink.innerText = "Logout";
+} else {
+  signinLink.href = "login.html";
+  signinLink.innerText = "Sign in";
+}
