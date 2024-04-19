@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quantumize</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/misc.css" />
     <link
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
       rel="stylesheet"
@@ -13,19 +15,21 @@
       rel="stylesheet"
       type="text/css"
     />
+    <script
+      src="https://kit.fontawesome.com/caf3b08ed2.js"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <!-- Navbar section -->
-    <section>
+    <!-- Navigation -->
+    <!-- Do not forget the dark mode -->
+    <section class="main">
       <div class="navbar mx-auto px-12">
         <div class="navbar-start">
           <div class="dropdown">
-            <div
-              tabindex="0"
-              role="button"
-              class="btn btn-ghost lg:hidden -ml-8"
-            >
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -53,11 +57,11 @@
                   <li><a href="drone.html">DRONE 2</a></li>
                 </ul>
               </li>
-              <li><a href="contact-us.html">Contact Us</a></li>
+              <li><a href="">Item 3</a></li>
             </ul>
           </div>
           <a
-            class="btn btn-ghost text-md bg-clip-text text-transparent bg-gradient-to-tr from-orange-600 to-yellow-300"
+            class="btn btn-ghost text-xl bg-clip-text text-transparent bg-gradient-to-tr from-orange-600 to-yellow-300"
             >Quantumize</a
           >
         </div>
@@ -82,8 +86,131 @@
           >
         </div>
       </div>
+      <section class="banner-section mx-4 lg:mx-24 hidden">
+        <div class="text-section">
+          <div class="anton-regular uppercase banner-text">
+            <span
+              class="text-[60px] -ml-2 mb-4 bg-clip-text text-transparent bg-gradient-to-tr from-orange-600 to-yellow-300"
+              id="embark"
+            >
+              EMBARK
+            </span>
+            <span
+              class="ml-24 text-[40px] bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-indigo-500"
+              >into the
+            </span>
+            <div class="block -mt-28">
+              <span class="text-[200px] tracking-tight"
+                >NE<span class="text-[240px]" id="x">X</span>T</span
+              >
+              <span class="text-[110px]"
+                ><span
+                  class="bg-clip-text text-transparent bg-gradient-to-b from-sky-500 to-indigo-500"
+                  >Dimension</span
+                >
+                of</span
+              >
+            </div>
+            <div class="-mt-32">
+              <span
+                class="span-block text-[240px] bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-indigo-500"
+                >Technology</span
+              >
+            </div>
+          </div>
+          <!-- <div class="section-banner-absolute hidden lg:inline">
+            <img
+              src="assets/muscle-robo.png"
+              id="banner-image"
+              alt="muscular-robo"
+              class="object-contain -mt-96"
+            />
+          </div> -->
+        </div>
+      </section>
     </section>
-    <!-- Hero section -->
-    <section></section>
+
+    <footer class="bg-white dark:bg-gray-900">
+      <div class="mx-auto w-full max-w-screen-xl text-center">
+        <div
+          class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3 place-content-center"
+        >
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Contact Links
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="mailto:someone@example.com" class="hover:underline"
+                  >quantumize@gmail.com</a
+                >
+              </li>
+              <li class="mb-4">
+                <a href="tel:+14169048914" class="hover:underline"
+                  >+1 (416) 9048914</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Socials
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline"
+                  ><i class="fa-brands fa-instagram mr-2"></i>Instagram</a
+                >
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline"
+                  ><i class="fa-brands fa-x mr-2"></i>Twitter</a
+                >
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline"
+                  ><i class="fa-brands fa-facebook mr-2"></i>Facebook</a
+                >
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline"
+                  ><i class="fa-brands fa-linkedin mr-2"></i>LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Products
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="bot.html" class="hover:underline">Bot</a>
+              </li>
+              <li class="mb-4">
+                <a href="drone.html" class="hover:underline">Drones</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between rounded-t-lg"
+        >
+          <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center"
+            >© 2024
+            <a href="https://flowbite.com/" class="gradient-text-fire"
+              >Quantumize™</a
+            >. All Rights Reserved.
+          </span>
+        </div>
+      </div>
+    </footer>
   </body>
+  <script src="scripts/script.js"></script>
 </html>
