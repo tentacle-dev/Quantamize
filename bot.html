@@ -14,6 +14,7 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/misc.css" />
   </head>
   <body>
     <!-- Navbar section -->
@@ -57,7 +58,7 @@
             </ul>
           </div>
           <a
-            class="btn btn-ghost text-md bg-clip-text text-transparent bg-gradient-to-tr from-orange-600 to-yellow-300"
+            class="btn btn-ghost text-md bg-clip-text text-transparent bg-gradient-to-tr from-orange-600 to-yellow-300 lg:text-xl"
             >Quantumize</a
           >
         </div>
@@ -77,11 +78,18 @@
           </ul>
         </div>
         <div class="navbar-end">
-          <a href="login.html" class="btn gradient-text-1" id="signin-link"
+          <a href="login.html" class="btn gradient-text-1 mt-2" id="signin-link"
             >Sign in</a
           >
         </div>
       </div>
     </section>
+    <section>
+      <div
+        id="product-list"
+        class="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-8 mx-4 mt-12"
+      ></div>
+    </section>
   </body>
+  <script src="scripts/botScript.js"></script>
 </html>
