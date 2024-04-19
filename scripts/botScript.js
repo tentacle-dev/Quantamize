@@ -1,15 +1,4 @@
-// chooses the first one that is available/found
-const indexedDB =
-  window.indexedDB ||
-  window.mozIndexedDB ||
-  window.webkitIndexedDB ||
-  window.msIndexedDB ||
-  window.shimIndexedDB;
-
-// Some browsers may not support
-if (!indexedDB) {
-  console.log("IndexedDB could not be found in this browser.");
-}
+// Function to display products
 
 function displayProducts() {
   const dbName = "Quantamize";
@@ -37,21 +26,21 @@ function displayProducts() {
           productDiv.innerHTML = `
                         
 
-                <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer ">
-                    
-                        <img class="p-1 rounded-t-lg product-img" src="${product.image_path}" />
-                    <div class="px-5 pb-5 mt-2">
-                        <div>
-                            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">${product.name}</h5>
-                            <h5 class="text-md tracking-tight text-gray-900 dark:text-gray-100">${product.description}</h5>
-                        </div>
-                        
-                        <div class="flex items-center justify-between lg:mt-1">
-                            <span class="text-3xl font-bold text-gray-900 dark:text-white">${product.price}</span>
-                            <a class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
+<div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 cursor-pointer ">
+    
+        <img class="p-1 rounded-t-lg product-img zoomable-image" src="${product.image_path}" />
+    <div class="px-5 pb-5 mt-2">
+        <div>
+            <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">${product.name}</h5>
+            <h5 class="text-md tracking-tight text-gray-900 dark:text-gray-100">${product.description}</h5>
+        </div>
+        
+        <div class="flex items-center justify-between lg:mt-1">
+            <span class="text-3xl font-bold text-gray-900 dark:text-white">${product.price}</span>
+            <a class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
+        </div>
+    </div>
+</div>
 
                     `;
           // Add click event listener to the product div
@@ -109,6 +98,7 @@ function addToCart(product) {
           product_id: product.product_id,
           user_id: user_id,
           quantity: 1, // Initial quantity
+          price: product.price, // Add the price of the product to the cart item
         };
         // Add the new cart item to the cart table
         const addToCartRequest = cartStore.add(cartItem);
@@ -123,6 +113,66 @@ function addToCart(product) {
   };
 }
 
-window.onload = () => {
+// Call the function to display products when the window loads
+window.onload = function () {
   displayProducts();
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+  const signinLink = document.getElementById("signin-link");
+  const userId = localStorage.getItem("user_id");
+
+  if (userId) {
+    signinLink.href = "cart.html";
+    signinLink.innerText = "My Cart";
+  } else {
+    signinLink.href = "login.html";
+    signinLink.innerText = "Sign in";
+  }
+});
+
+let lastTouchDistance = 0;
+let currentScale = 1;
+let activeImage = null;
+
+const images = document.querySelectorAll(".zoomable-image");
+
+images.forEach((image) => {
+  image.addEventListener("touchstart", function (event) {
+    activeImage = this;
+    if (event.touches.length >= 2) {
+      const touch1 = event.touches[0];
+      const touch2 = event.touches[1];
+      lastTouchDistance = Math.hypot(
+        touch2.clientX - touch1.clientX,
+        touch2.clientY - touch1.clientY
+      );
+    }
+  });
+
+  image.addEventListener("touchmove", function (event) {
+    if (activeImage === this && event.touches.length >= 2) {
+      const touch1 = event.touches[0];
+      const touch2 = event.touches[1];
+      const touchDistance = Math.hypot(
+        touch2.clientX - touch1.clientX,
+        touch2.clientY - touch1.clientY
+      );
+
+      const scaleChange = touchDistance / lastTouchDistance;
+      currentScale *= scaleChange;
+
+      this.style.transform = `scale(${currentScale})`;
+
+      lastTouchDistance = touchDistance;
+
+      event.preventDefault();
+    }
+  });
+
+  image.addEventListener("touchend", function (event) {
+    if (activeImage === this) {
+      activeImage = null;
+    }
+  });
+});

@@ -26,10 +26,34 @@
   font-style: normal;
 }
 
+footer a:hover {
+  background-color: #fde047;
+  background-image: linear-gradient(45deg, #ea580c, #fde047);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+footer h2:hover {
+  background-color: #0ea5e9;
+  background-image: linear-gradient(45deg, #0ea5e9, #4f46e5);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
 .product-img {
   width: 400px;
   height: 300px;
   object-fit: cover;
+  transition: ease;
+  transition: transform 0.5s ease, border-radius 0.5s ease;
 }
 
 @media only screen and (max-width: 769px) {

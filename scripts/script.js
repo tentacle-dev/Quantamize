@@ -184,6 +184,7 @@ window.onload = () => {
     cartStore.createIndex("product_id", "product_id", { unique: false });
     cartStore.createIndex("user_id", "user_id", { unique: false });
     cartStore.createIndex("quantity", "quantity", { unique: false });
+    cartStore.createIndex("price", "price", { unique: false });
 
     console.log("Cart Table created successfully");
   };

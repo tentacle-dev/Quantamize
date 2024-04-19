@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+  background: url("../assets/block-bg-ultra.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
+}
+
+#x {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 3px;
+}
+
+.span-block {
+  display: block;
+}
+
+.section-banner-absolute {
+  position: absolute;
+  top: 20;
+  right: 0;
+  filter: brightness(0.75);
+}
