@@ -4,11 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    
 </head>
 <body>
-    <div>
-        
+    <div class="flex">
+        <div class="mx-auto my-auto mt-12 glass px-14 py-14 dark:text-white">
+            <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div class="bg-blue-600 h-2.5 rounded-full " style="width:0%" id="progress"></div>
+            </div>
+            <form class="max-w-sm mx-auto w-96 mt-2" id="registrationForm" action="#" method="post">
+                <div>
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Address</label>
+                    <input type="email" id="email" name="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
+                </div>
+                <div>
+                    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                    <input type="password" id="password" name="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                </div>
+                <div>
+                    <label for="personalURL" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Personal URL</label>
+                    <input type="url" id="personalURL" name="personalURL" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="http://example.com" required />
+                </div>
+                <div>
+                    <label for="yearOfBirth" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Year of Birth</label>
+                    <input type="number" id="yearOfBirth" name="yearOfBirth" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" min="1900" max="2024" required />
+                </div>
+                <div>
+                    <label>Gender</label>
+                    <div>
+                        <input type="radio" id="male" name="gender" value="male" class="h-4 w-4 text-blue-500 focus:ring-blue-500 dark:focus:ring-blue-500 dark:text-blue-500" required />
+                        <label for="male" class="text-sm font-medium text-gray-900 dark:text-white">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" class="h-4 w-4 text-blue-500 focus:ring-blue-500 dark:focus:ring-blue-500 dark:text-blue-500" required />
+                        <label for="female" class="text-sm font-medium text-gray-900 dark:text-white">Female</label>
+                        <input type="radio" id="other" name="gender" value="other" class="h-4 w-4 text-blue-500 focus:ring-blue-500 dark:focus:ring-blue-500 dark:text-blue-500" required />
+                        <label for="other" class="text-sm font-medium text-gray-900 dark:text-white">Other</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="comments" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Comments</label>
+                    <textarea id="comments" name="comments" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required></textarea>
+                </div>
+                
+                <div>
+                    <button type="submit">Submit</button><br />
+                </div>
+            </form>
+            
+        </div>
     </div>
+    </body>
+    
     
 </body>
 </html>
