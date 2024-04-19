@@ -125,6 +125,56 @@ window.onload = () => {
     prodTransaction.onerror = function (event) {
       console.error("Error adding products: " + event.target.errorCode);
     };
+
+    const userStore = db.createObjectStore("user", {
+      keyPath: "user_id",
+      autoIncrement: true,
+    });
+
+    // Define the structure of the user data and create indexes
+    userStore.createIndex("email", "email", { unique: true });
+    userStore.createIndex("personalUrl", "personalUrl", { unique: false });
+    userStore.createIndex("yearOfBirth", "yearOfBirth", { unique: false });
+    userStore.createIndex("gender", "gender", { unique: false });
+    userStore.createIndex("comments", "comments", { unique: false });
+    userStore.createIndex("dataValidityConfirmed", "dataValidityConfirmed", {
+      unique: false,
+    });
+
+    console.log("User table created successfully");
+
+    let userTransaction = event.target.transaction;
+    // Sample user data
+    const user1 = {
+      email: "user1@example.com",
+      personalUrl: "http://example.com/user1",
+      yearOfBirth: 1995,
+      gender: "male",
+      password: "user1@example.com",
+      comments: "Sample comments for user 1.",
+      dataValidityConfirmed: true,
+    };
+
+    const user2 = {
+      email: "user2@example.com",
+      personalUrl: "http://example.com/user2",
+      yearOfBirth: 1988,
+      gender: "female",
+      password: "user2@example.com",
+      comments: "Sample comments for user 2.",
+      dataValidityConfirmed: true,
+    };
+
+    userStore.add(user1);
+    userStore.add(user2);
+
+    userTransaction.oncomplete = function () {
+      console.log("Users added successfully");
+    };
+
+    userTransaction.onerror = function (event) {
+      console.error("Error adding users: " + event.target.errorCode);
+    };
   };
 };
 
