@@ -82,11 +82,7 @@ window.onload = () => {
       price: 9999.99,
       description:
         "Advanced humanoid robot capable of performing various tasks.",
-<<<<<<< HEAD
       image_path: "assets/products/bot1ultra.jpg",
-=======
-      image_path: "assets/products/bot1low.jpg",
->>>>>>> origin/main
     };
 
     const robot2 = {
@@ -95,7 +91,6 @@ window.onload = () => {
       price: 14499.99,
       description:
         "Versatile robot with advanced AI capabilities for home and industrial use.",
-<<<<<<< HEAD
       image_path: "assets/products/bot2ultra.jpg",
     };
     const robot3 = {
@@ -123,9 +118,6 @@ window.onload = () => {
       description:
         "Affordable household robot designed for everyday tasks and entertainment.",
       image_path: "assets/products/bot5ultra.jpg",
-=======
-      image_path: "assets/products/bot2low.jpg",
->>>>>>> origin/main
     };
 
     // Sample drone data
@@ -135,11 +127,7 @@ window.onload = () => {
       price: 299.99,
       description:
         "Compact drone with HD camera and GPS for aerial photography and videography.",
-<<<<<<< HEAD
       image_path: "assets/products/drone1ultra.jpg",
-=======
-      image_path: "assets/products/drone1low.jpg",
->>>>>>> origin/main
     };
 
     const drone2 = {
@@ -148,7 +136,6 @@ window.onload = () => {
       price: 499.99,
       description:
         "Professional-grade drone with long flight time and obstacle avoidance features.",
-<<<<<<< HEAD
       image_path: "assets/products/drone2ultra.jpg",
     };
     const drone3 = {
@@ -176,14 +163,10 @@ window.onload = () => {
       description:
         "High-performance drone with dual camera system, GPS tracking, and 360-degree obstacle avoidance.",
       image_path: "assets/products/drone5ultra.jpg",
-=======
-      image_path: "assets/products/drone2low.jpg",
->>>>>>> origin/main
     };
 
     productStore.put(robot1);
     productStore.put(robot2);
-<<<<<<< HEAD
     productStore.put(robot3);
     productStore.put(robot4);
     productStore.put(robot5);
@@ -192,10 +175,6 @@ window.onload = () => {
     productStore.put(drone3);
     productStore.put(drone4);
     productStore.put(drone5);
-=======
-    productStore.put(drone1);
-    productStore.put(drone2);
->>>>>>> origin/main
 
     prodTransaction.oncomplete = function () {
       console.log("Products added successfully");
