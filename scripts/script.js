@@ -93,6 +93,32 @@ window.onload = () => {
         "Versatile robot with advanced AI capabilities for home and industrial use.",
       image_path: "assets/products/bot2ultra.jpg",
     };
+    const robot3 = {
+      name: "TechTitan X",
+      type: "Robot",
+      price: 7999.99,
+      description:
+        "Robust industrial robot with heavy lifting capabilities and precision engineering.",
+      image_path: "assets/products/bot3ultra.jpg",
+    };
+
+    const robot4 = {
+      name: "CyberLink Pro",
+      type: "Robot",
+      price: 11999.99,
+      description:
+        "Advanced humanoid assistant with natural language processing and interactive features.",
+      image_path: "assets/products/bot4ultra.jpg",
+    };
+
+    const robot5 = {
+      name: "FutureSight",
+      type: "Robot",
+      price: 999.99,
+      description:
+        "Affordable household robot designed for everyday tasks and entertainment.",
+      image_path: "assets/products/bot5ultra.jpg",
+    };
 
     // Sample drone data
     const drone1 = {
@@ -112,11 +138,43 @@ window.onload = () => {
         "Professional-grade drone with long flight time and obstacle avoidance features.",
       image_path: "assets/products/drone2ultra.jpg",
     };
+    const drone3 = {
+      name: "WingMaster Pro",
+      type: "Drone",
+      price: 799.99,
+      description:
+        "Advanced drone with 4K camera, intelligent flight modes, and extended battery life.",
+      image_path: "assets/products/drone3low.jpg",
+    };
+
+    const drone4 = {
+      name: "SwiftFly Navigator",
+      type: "Drone",
+      price: 349.99,
+      description:
+        "Compact drone with precise controls and foldable design for easy portability.",
+      image_path: "assets/products/drone4low.jpg",
+    };
+
+    const drone5 = {
+      name: "ThunderHawk X",
+      type: "Drone",
+      price: 899.99,
+      description:
+        "High-performance drone with dual camera system, GPS tracking, and 360-degree obstacle avoidance.",
+      image_path: "assets/products/drone5low.jpg",
+    };
 
     productStore.put(robot1);
     productStore.put(robot2);
+    productStore.put(robot3);
+    productStore.put(robot4);
+    productStore.put(robot5);
     productStore.put(drone1);
     productStore.put(drone2);
+    productStore.put(drone3);
+    productStore.put(drone4);
+    productStore.put(drone5);
 
     prodTransaction.oncomplete = function () {
       console.log("Products added successfully");
