@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+    <link rel="stylesheet" href="styles/formMisc.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/fav.png" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/contact-us.css" />
+    <link rel="stylesheet" href="styles/misc.css" />
+  </head>
+  <body>
+    <section>
+      <div class="navbar mx-auto px-12">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost lg:hidden -ml-8"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>ABOUT US</a></li>
+              <li>
+                <a href="">OUR PRODUCTS</a>
+                <ul class="p-2">
+                  <li><a href="bot.html">BOTS</a></li>
+                  <li><a href="drone.html">DRONE</a></li>
+                </ul>
+              </li>
+              <li><a href="contact-us.html">CONTACT US</a></li>
+              <li><a href="cart.html">CART</a></li>
+            </ul>
+          </div>
+          <a
+            href="index.html"
+            class="btn btn-ghost text-md bg-clip-text text-transparent bg-gradient-to-tr from-orange-600 to-yellow-300 lg:text-xl"
+            >Quantumize</a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a href="about-us.html">ABOUT US</a></li>
+            <li>
+              <details>
+                <summary>OUR PRODUCTS</summary>
+                <ul class="p-2">
+                  <li><a href="bot.html">BOTS</a></li>
+                  <li><a href="drone.html">DRONES</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="contact-us.html">CONTACT US</a></li>
+            <li><a href="cart.html">CART</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a href="login.html" class="btn gradient-text-1 mt-2" id="signin-link"
+            >Sign in</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="flex items-center justify-center">
+      <!-- Mobile form -->
+      <div class="glass">
+        <form
+          class="mx-4 md:mx-12 lg:mx-24 my-auto px-14 py-14 lg:px-4 dark:text-white"
+        >
+          <div class="mx-8 mt-4">
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="email"
+                name="floating_email"
+                id="floating_email"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="floating_email"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Email address</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="password"
+                name="floating_password"
+                id="floating_password"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="floating_password"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Password</label
+              >
+            </div>
+            <div class="relative z-0 w-full mb-5 group">
+              <input
+                type="password"
+                name="repeat_password"
+                id="floating_repeat_password"
+                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+                required
+              />
+              <label
+                for="floating_repeat_password"
+                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >Confirm password</label
+              >
+            </div>
+            <div class="lg:grid lg::grid-cols-2 md:gap-6">
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  name="floating_first_name"
+                  id="floating_first_name"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_first_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >First name</label
+                >
+              </div>
+            </div>
+            <div class="lg:grid lg:grid-cols-2 md:gap-6">
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="tel"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  name="floating_phone"
+                  id="floating_phone"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_phone"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Phone number</label
+                >
+              </div>
+              <div class="relative z-0 w-full mb-5 group">
+                <input
+                  type="text"
+                  name="floating_company"
+                  id="floating_company"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_company"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >Company</label
+                >
+              </div>
+            </div>
+            <div class="text-center">
+              <button
+                type="submit"
+                class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="bg-white dark:bg-gray-900">
+      <div class="mx-auto w-full max-w-screen-xl text-center">
+        <div
+          class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3 place-content-center"
+        >
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Contact Links
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="mailto:someone@example.com" class="hover:underline"
+                  ><i class="fa-solid fa-envelope mr-2"></i
+                  >quantumize@gmail.com</a
+                >
+              </li>
+              <li class="mb-4">
+                <a href="tel:+14169048914" class="hover:underline"
+                  ><i class="fa-solid fa-phone mr-2"></i>+1 (416) 9048914</a
+                >
+              </li>
+              <li class="mb-4">
+                <a href="whatsapp://send?phone=14169048914"
+                  ><i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Socials
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline"
+                  ><i class="fa-brands fa-instagram mr-2"></i>Instagram</a
+                >
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline"
+                  ><i class="fa-brands fa-x mr-2"></i>Twitter</a
+                >
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline"
+                  ><i class="fa-brands fa-facebook mr-2"></i>Facebook</a
+                >
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline"
+                  ><i class="fa-brands fa-linkedin mr-2"></i>LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Products
+            </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="bot.html" class="hover:underline">Bot</a>
+              </li>
+              <li class="mb-4">
+                <a href="drone.html" class="hover:underline">Drones</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between rounded-t-lg"
+        >
+          <span class="text-sm text-gray-500 dark:text-gray-300 sm:text-center"
+            >© 2024
+            <a href="https://flowbite.com/" class="gradient-text-fire"
+              >Quantumize™</a
+            >. All Rights Reserved.
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/caf3b08ed2.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

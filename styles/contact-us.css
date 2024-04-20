@@ -1,0 +1,7 @@
+body {
+    /* Set background image */
+    background-image: url('contact-us-bg.jpg');
+    color: white;
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the image */
+}
