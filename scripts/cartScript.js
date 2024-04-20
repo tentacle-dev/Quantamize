@@ -251,7 +251,10 @@ function removeCartItem(cartItemId, productPrice) {
     const deleteRequest = cartStore.delete(cartItemId);
 
     deleteRequest.onsuccess = function () {
+<<<<<<< HEAD
       alert("Product removed successfully");
+=======
+>>>>>>> origin/main
       location.reload();
     };
 
