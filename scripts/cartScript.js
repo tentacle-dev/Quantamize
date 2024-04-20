@@ -139,7 +139,9 @@ function displayCartItem(cartItem, product) {
     "text-3xl",
     "font-bold",
     "text-gray-900",
-    "dark:text-white"
+    "dark:text-white",
+    "mb-4",
+    "ml-2"
   );
   priceElement.textContent = cartItem.price; // Display the price from the cart item
   priceButtonDiv.appendChild(priceElement);
@@ -265,10 +267,16 @@ window.onload = function () {
   checkLoggedIn();
   displayCartItems();
 };
-if (userId) {
-  signinLink.href = "logout.html";
-  signinLink.innerText = "Logout";
-} else {
-  signinLink.href = "login.html";
-  signinLink.innerText = "Sign in";
-}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const signinLink = document.getElementById("signin-link");
+  const userId = localStorage.getItem("user_id");
+
+  if (userId) {
+    signinLink.href = "logout.html";
+    signinLink.innerText = "Logout";
+  } else {
+    signinLink.href = "login.html";
+    signinLink.innerText = "Sign in";
+  }
+});
