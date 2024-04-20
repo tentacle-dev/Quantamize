@@ -144,7 +144,7 @@ window.onload = () => {
       price: 799.99,
       description:
         "Advanced drone with 4K camera, intelligent flight modes, and extended battery life.",
-      image_path: "assets/products/drone3low.jpg",
+      image_path: "assets/products/drone3ultra.jpg",
     };
 
     const drone4 = {
@@ -153,7 +153,7 @@ window.onload = () => {
       price: 349.99,
       description:
         "Compact drone with precise controls and foldable design for easy portability.",
-      image_path: "assets/products/drone4low.jpg",
+      image_path: "assets/products/drone4ultra.jpg",
     };
 
     const drone5 = {
@@ -162,7 +162,7 @@ window.onload = () => {
       price: 899.99,
       description:
         "High-performance drone with dual camera system, GPS tracking, and 360-degree obstacle avoidance.",
-      image_path: "assets/products/drone5low.jpg",
+      image_path: "assets/products/drone5ultra.jpg",
     };
 
     productStore.put(robot1);
