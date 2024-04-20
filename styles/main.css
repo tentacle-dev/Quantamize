@@ -4,11 +4,8 @@
 @tailwind utilities;
 
 .main {
-<<<<<<< HEAD
   background: url("../assets/block-bg-ultra.jpg");
-=======
-  background: url("../assets/block-bg-low.jpg");
->>>>>>> origin/main
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
