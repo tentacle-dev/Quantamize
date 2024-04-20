@@ -86,7 +86,11 @@ function addToCart(product) {
         // Entry already exists, update quantity or any other field if needed
         existingCartItem.quantity++; // For example, increase quantity
         cartStore.put(existingCartItem); // Update the existing entry
+<<<<<<< HEAD
+        alert("Existing entry updated in cart");
+=======
         console.log("Existing entry updated in cart");
+>>>>>>> origin/main
       } else {
         // Entry doesn't exist, add new entry to cart
         const cartItem = {
@@ -97,7 +101,11 @@ function addToCart(product) {
         // Add the new cart item to the cart table
         const addToCartRequest = cartStore.add(cartItem);
         addToCartRequest.onsuccess = function () {
+<<<<<<< HEAD
+          alert("Product added to cart");
+=======
           console.log("Product added to cart");
+>>>>>>> origin/main
         };
         addToCartRequest.onerror = function () {
           console.error("Failed to add product to cart");
